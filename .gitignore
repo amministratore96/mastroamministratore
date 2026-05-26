@@ -29,3 +29,9 @@ pnpm-debug.log*
 # Cache
 .cache/
 .parcel-cache/
+
+# Chiavi SSH — mai committare
+id_ed25519
+id_ed25519.pub
+*.pem
+*.key
