@@ -30,6 +30,9 @@ pnpm-debug.log*
 .cache/
 .parcel-cache/
 
+# Claude Code
+.claude/
+
 # Secrets — mai committare
 secrets/
 *.pem
