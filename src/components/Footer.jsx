@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
           <span className={styles.logo}>⬡ Mastro<strong>Amministratore</strong></span>
-          <p>Amministrazione condominiale professionale.<br />Certificato ANACI · UNI 10801 · UNI 11777</p>
+          <p>Amministrazione condominiale professionale.<br />Associato ABICONF</p>
         </div>
 
         <div className={styles.links}>
@@ -29,7 +29,7 @@ export default function Footer() {
       </div>
       <div className={`container ${styles.bottom}`}>
         <p>© {year} MastroAmministratore — P.IVA 00000000000</p>
-        <p>Via Roma 1, Milano · info@mastroamministratore.it</p>
+        <p>+39 334 135 7928 · federicomastrostefano96@gmail.com</p>
       </div>
     </footer>
   )

@@ -30,21 +30,21 @@ export default function Contact() {
                 <span>📞</span>
                 <div>
                   <strong>Telefono</strong>
-                  <a href="tel:+390000000000">+39 00 0000 0000</a>
+                  <a href="tel:+393341357928">+39 334 135 7928</a>
                 </div>
               </div>
               <div className={styles.contactItem}>
                 <span>✉️</span>
                 <div>
                   <strong>Email</strong>
-                  <a href="mailto:info@mastroamministratore.it">info@mastroamministratore.it</a>
+                  <a href="mailto:federicomastrostefano96@gmail.com">federicomastrostefano96@gmail.com</a>
                 </div>
               </div>
               <div className={styles.contactItem}>
                 <span>💬</span>
                 <div>
                   <strong>WhatsApp</strong>
-                  <a href="https://wa.me/390000000000" target="_blank" rel="noreferrer">Scrivimi su WhatsApp</a>
+                  <a href="https://wa.me/393341357928" target="_blank" rel="noreferrer">Scrivimi su WhatsApp</a>
                 </div>
               </div>
               <div className={styles.contactItem}>

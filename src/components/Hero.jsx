@@ -19,10 +19,10 @@ export default function Hero() {
         </div>
         <div className={styles.stats}>
           {[
-            { value: '20+', label: 'Anni di esperienza' },
-            { value: '150+', label: 'Condomini gestiti' },
-            { value: '3.000+', label: 'Unità immobiliari' },
             { value: '24/7', label: 'Reperibilità' },
+            { value: '100%', label: 'Documenti online' },
+            { value: '<24h', label: 'Tempo di risposta' },
+            { value: '360°', label: 'Gestione completa' },
           ].map(s => (
             <div key={s.label} className={styles.stat}>
               <span className={styles.statValue}>{s.value}</span>
