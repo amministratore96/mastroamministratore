@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 const links = [
-  { label: 'Chi Sono', href: '#chi-siamo' },
-  { label: 'Servizi',  href: '#servizi' },
-  { label: 'Perché Me', href: '#perche-noi' },
-  { label: 'Contatti',  href: '#contatti' },
+  { label: 'Chi Sono',    href: '#chi-siamo' },
+  { label: 'Servizi',     href: '#servizi' },
+  { label: 'Perché Me',   href: '#perche-noi' },
+  { label: 'Recensioni',  href: '#recensioni' },
+  { label: 'Contatti',    href: '#contatti' },
 ]
 
 export default function Navbar() {

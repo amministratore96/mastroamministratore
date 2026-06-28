@@ -132,6 +132,15 @@ textarea { resize: vertical; }
 .success h3 { font-size: 1.25rem; color: var(--blue-900); }
 .success p { color: var(--gray-700); }
 
+.errorMsg {
+  font-size: .88rem;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.errorMsg a { color: #b91c1c; text-decoration: underline; }
+
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; gap: 40px; }
   .row { grid-template-columns: 1fr; }

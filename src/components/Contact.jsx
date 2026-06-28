@@ -1,16 +1,33 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import styles from './Contact.module.css'
 
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
 export default function Contact() {
-  const [sent, setSent] = useState(false)
+  const [sent, setSent]       = useState(false)
+  const [error, setError]     = useState(false)
+  const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({ nome: '', email: '', telefono: '', messaggio: '', tipo: 'preventivo' })
+  const formRef = useRef(null)
 
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const submit = e => {
+  const submit = async e => {
     e.preventDefault()
-    // TODO: collegare a backend/email service
-    setSent(true)
+    setLoading(true)
+    setError(false)
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, { publicKey: PUBLIC_KEY })
+      setSent(true)
+    } catch (err) {
+      console.error('EmailJS error:', err)
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -51,7 +68,7 @@ export default function Contact() {
                 <span>📍</span>
                 <div>
                   <strong>Sede</strong>
-                  <span>Via Roma 1, Milano (MI)</span>
+                  <span>Via Edgardo Zauli Sajani 5, Velletri (RM)</span>
                 </div>
               </div>
             </div>
@@ -71,7 +88,7 @@ export default function Contact() {
                 <p>Ti risponderò entro 24 ore lavorative.</p>
               </div>
             ) : (
-              <form className={styles.form} onSubmit={submit}>
+              <form ref={formRef} className={styles.form} onSubmit={submit}>
                 <h3 className={styles.formTitle}>Richiedi Preventivo Gratuito</h3>
 
                 <div className={styles.row}>
@@ -106,8 +123,15 @@ export default function Contact() {
                     placeholder="Descrivici il tuo condominio: numero di unità, indirizzo, eventuali problemi attuali..." />
                 </label>
 
-                <button type="submit" className="btn btn-primary">
-                  Invia richiesta →
+                {error && (
+                  <p className={styles.errorMsg}>
+                    Invio fallito. Riprova oppure scrivimi direttamente a{' '}
+                    <a href="mailto:federicomastrostefano96@gmail.com">federicomastrostefano96@gmail.com</a>.
+                  </p>
+                )}
+
+                <button type="submit" className="btn btn-primary" disabled={loading}>
+                  {loading ? 'Invio in corso…' : 'Invia richiesta →'}
                 </button>
 
                 <p className={styles.privacy}>

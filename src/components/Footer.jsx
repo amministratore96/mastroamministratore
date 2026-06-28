@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={`container ${styles.bottom}`}>
-        <p>© {year} MastroAmministratore — P.IVA 00000000000</p>
+        <p>© {year} MastroAmministratore — Via Edgardo Zauli Sajani 5, Velletri (RM)</p>
         <p>+39 334 135 7928 · federicomastrostefano96@gmail.com</p>
       </div>
     </footer>

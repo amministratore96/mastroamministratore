@@ -26,7 +26,10 @@ jobs:
 
       - name: Build
         run: npm run build
-        # vite usa automaticamente .env.production in modalità build
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        # GOOGLE_PLACES_API_KEY viene da GitHub Secrets (non committata)
+        # VITE_GOOGLE_PLACE_ID viene da .env.production (committata, non è un segreto)
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
