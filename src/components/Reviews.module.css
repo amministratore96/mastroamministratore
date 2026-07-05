@@ -98,6 +98,11 @@
   flex: 1;
 }
 
+.more {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
 .empty {
   text-align: center;
   padding: 3rem;

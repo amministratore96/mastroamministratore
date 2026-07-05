@@ -1,8 +1,30 @@
-import { writeFileSync } from 'fs'
+import { writeFileSync, readFileSync, existsSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+
+// Carica .env.local se presente (Node non lo legge automaticamente)
+const envLocalPath = resolve(__dirname, '../.env.local')
+if (existsSync(envLocalPath)) {
+  for (const line of readFileSync(envLocalPath, 'utf8').split('\n')) {
+    const [key, ...rest] = line.split('=')
+    if (key && !key.startsWith('#') && rest.length) {
+      process.env[key.trim()] = rest.join('=').trim()
+    }
+  }
+}
+
+// Carica anche .env.production per VITE_GOOGLE_PLACE_ID
+const envProdPath = resolve(__dirname, '../.env.production')
+if (existsSync(envProdPath)) {
+  for (const line of readFileSync(envProdPath, 'utf8').split('\n')) {
+    const [key, ...rest] = line.split('=')
+    if (key && !key.startsWith('#') && rest.length && !process.env[key.trim()]) {
+      process.env[key.trim()] = rest.join('=').trim()
+    }
+  }
+}
 
 const PLACE_ID = process.env.VITE_GOOGLE_PLACE_ID
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY

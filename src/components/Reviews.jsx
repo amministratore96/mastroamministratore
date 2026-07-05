@@ -16,6 +16,10 @@ export default function Reviews() {
     ? `https://search.google.com/local/writereview?placeid=${PLACE_ID}`
     : 'https://maps.google.com'
 
+  const allReviewsUrl = PLACE_ID
+    ? `https://www.google.com/maps/search/?api=1&query=Amministratore+Mastrostefano+Federico&query_place_id=${PLACE_ID}`
+    : 'https://maps.google.com'
+
   return (
     <section id="recensioni" className={styles.section}>
       <div className="container">
@@ -35,31 +39,38 @@ export default function Reviews() {
             href={writeUrl}
             target="_blank"
             rel="noreferrer"
-            className="btn btn-outline"
+            className="btn btn-primary"
           >
             ⭐ Lascia una recensione
           </a>
         </div>
 
         {data.reviews.length > 0 ? (
-          <div className={styles.grid}>
-            {data.reviews.map((r, i) => (
-              <div key={i} className={styles.card}>
-                <div className={styles.cardHeader}>
-                  {r.avatar
-                    ? <img src={r.avatar} alt={r.author} className={styles.avatar} referrerPolicy="no-referrer" />
-                    : <div className={styles.avatarFallback}>{r.author[0]}</div>
-                  }
-                  <div>
-                    <strong className={styles.author}>{r.author}</strong>
-                    <span className={styles.time}>{r.time}</span>
+          <>
+            <div className={styles.grid}>
+              {data.reviews.map((r, i) => (
+                <div key={i} className={styles.card}>
+                  <div className={styles.cardHeader}>
+                    {r.avatar
+                      ? <img src={r.avatar} alt={r.author} className={styles.avatar} referrerPolicy="no-referrer" />
+                      : <div className={styles.avatarFallback}>{r.author[0]}</div>
+                    }
+                    <div>
+                      <strong className={styles.author}>{r.author}</strong>
+                      <span className={styles.time}>{r.time}</span>
+                    </div>
                   </div>
+                  <Stars count={r.rating} />
+                  <p className={styles.text}>{r.text}</p>
                 </div>
-                <Stars count={r.rating} />
-                <p className={styles.text}>{r.text}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+            <div className={styles.more}>
+              <a href={allReviewsUrl} target="_blank" rel="noreferrer" className="btn btn-primary">
+                Visualizza tutte le recensioni su Google →
+              </a>
+            </div>
+          </>
         ) : (
           <div className={styles.empty}>
             <p>Sii il primo a lasciare una recensione!</p>

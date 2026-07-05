@@ -1,1 +1,41 @@
-{"rating":5,"total":0,"reviews":[]}
+{
+  "rating": 5,
+  "total": 36,
+  "reviews": [
+    {
+      "author": "velia sabelli",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVlo5_pybFQpmJtkZcNdUtsTCfA_vQpDF7S8m_uUe3NYwx2_2o=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Desidero esprimere il mio più sincero apprezzamento per la straordinaria professionalità dimostrata dall'amministratore del Supercondominio sito in Palestrina, nella gestione di una complessa problematica di infiltrazione d'acqua che coinvolgeva il mio appartamento e quello confinante.\nL'amministratore ha agito con grande efficacia non solo come figura gestionale, ma soprattutto come abile mediatore.\nLa sua disponibilità costante è stata cruciale. Sa affrontare i problemi non solo dal lato tecnico, ma anche da quello umano, mantenendo la serenità e la collaborazione in tutto il Supercondominio.",
+      "time": "9 mesi fa"
+    },
+    {
+      "author": "Cecilia Calabresi",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLp69FA8CBOwU44h5muea-KNWWY4Ca6JCNegoKipH33PGXqTg=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Una persona davvero professionale, competente e decisamente smart. La sua disponibilità e la sua precisione non hanno avuto eguali non nostro condominio. Nei primi due mesi di mandato è riuscito a snocciolare questioni irrisolte da anni. Raccomandato a parenti ed amici, lo consiglio anche a chiunque voglia una persona affidabile e che faccia il proprio lavoro con estrema serietà e dedizione.",
+      "time": "8 mesi fa"
+    },
+    {
+      "author": "Max B.",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIEvSqDWJNOvUkPSC45rdSnt4IQ6dNU8srrPdLW474PhLmfBQ=s128-c0x00000000-cc-rp-mo-ba2",
+      "rating": 5,
+      "text": "amministratore competente e trasparente! Ha risolto problemi strutturali e amministrativi vecchi di anni in pochissimo tempo. Si applica in tutto con massima professionalità e disponibilità, risponde sempre alle email e garantisce una gestione precisa.\"",
+      "time": "2 mesi fa"
+    },
+    {
+      "author": "LUCA CIANFRIGLIA",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocL1bsR84khDWXsGGoo2sawUaXPbXoo90ZrrRsNbEY1Ge_cvJA=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Ho conosciuto l’amministratore Mastrostefano da qualche mese e garantisco di non aver mai avuto esperienze così positive in passato. Estremamente professionale, cordiale e di una disponibilità senza eguali. Bravissimo e spero che il nostro rapporto prosegua per tantissimi anni ancora. Grazie di tutto!",
+      "time": "3 mesi fa"
+    },
+    {
+      "author": "mauro d",
+      "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVlutUjInIpJhH18aKLaBNBQafNjru2qdtHfM61PhzF4vBxqoPP2Q=s128-c0x00000000-cc-rp-mo",
+      "rating": 5,
+      "text": "Il mio condominio proviene da almeno un decennio di pessima amministrazione.\nHo preso in prima persona l'iniziativa per cambiare amministratore, e avendo sentito parlare bene di Federico ho proposto agli altri condomini il suo nominativo. È stato accettato quasi all' unanimità ed ora viene osannato anche da chi aveva delle remore sul suo conto. Non so se se è pentito di questo subentro, per i casini che ha trovato, spero di no! Per farla breve, basti pensare che, per la prima volta da che sono condomino, gli abbiamo anche regalato un cesto per Natale!",
+      "time": "6 mesi fa"
+    }
+  ]
+}
