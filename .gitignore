@@ -40,3 +40,6 @@ pnpm-debug.log*
 secrets/
 *.pem
 *.key
+
+# QR code generati localmente
+scripts/output/
